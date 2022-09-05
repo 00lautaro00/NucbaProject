@@ -10,10 +10,16 @@
 
 }
 /* GLOBAL */
+html {
+    box-sizing: border-box;
+    
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 body{
-    padding: 0 4rem;
     background-color: var(--bg-green);
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 .container{
     display: flex;
@@ -40,9 +46,24 @@ p{
     background-color:var(--yellow1);
 }
 /* HEADER */
+header{
+    background-image: url("https://gallery.yopriceville.com/var/albums/Backgrounds/Vegetable_Background.jpg?m=1478277468");
+    background-size:cover;
+    width: 100%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+}
 .header{
     margin: 2rem 0;
     padding: 5rem;
+}
+.header-bg{
+position: relative;
+top: 1000px ;
+  background-color: #38383842;
+  padding: 20rem 20rem;
 }
 /* LOGO */
 .box-logo{
@@ -50,89 +71,140 @@ p{
     background-color: var(--darkgreen);
     border-radius: 50%;
 }
-.logo{
-   width: 25rem;
-   height: 25rem;
+.logo {
+    width: 15rem;
+    height: 15rem;
 }
 .logo-title {
     display: flex;
 }
 .logo-title h1 {
-    font-size: 3rem;
+    font-size: 1.6rem;
     color: var(--yellow3);
-    padding: 0 3rem;
     border-bottom: 4px solid var(--yellow3);
     border-radius: 4rem;
 }
 .title-left{
     position: relative;
-    top: -95px;
-    left: 55px;
+    top: -70px;
+    left: 60px;
     transform: rotate(35deg);
 }
 .title-right{
     position: relative;
-    top: -100px;
-    right: 35px;
+    top: -70px;
+    right: -60px;
     transform: rotate(-35deg);
 }
 
-/*Nav */
-.box-nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+@media (min-width: 1400px) {
+    .logo{
+        width: 20rem;
+        height: 20rem;
+    }
+    
+    .logo-title h1 {
+        font-size: 3rem;
+        padding: 0 3rem;
+        border-bottom: 4px solid var(--yellow3);
+        border-radius: 4rem;
+    }
+    .title-left{
+        position: relative;
+        top: -92px;
+        left: 55px;
+        transform: rotate(35deg);
+    }
+    .title-right{
+        position: relative;
+        top: -100px;
+        right: 35px;
+        transform: rotate(-35deg);
+    }
 }
 
+/*Nav */
+
 .nav-bar{
-    font-weight: 700;
-    font-size: 1.4rem;
+    display: none;
 }
-.nav-bar a {
-    color: var(--darkgreen2);
-    text-decoration: none;
-    margin-right: 2rem;
-    padding: .8rem 1.5rem;
+
+@media (min-width:800px){
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-top: 0;
+    }
+    .nav-bar a {
+        color: var(--darkgreen2);
+        text-decoration: none;
+    }
+    
+    .nav-bar a:hover {
+        background-color: var(--yellow3);
+        border-radius: 4rem;
+    }
+    .nav-bar a {
+        color: var(--darkgreen2);
+        text-decoration: none;
+        margin-right: 2rem;
+    }
+    .nav-bar a:last-of-type{
+        margin-right: 0;
+    }
 }
-.nav-bar a:last-of-type{
-    margin-right: 0;
+
+.titles{
+    display: none;
 }
-.nav-bar a:hover {
-    background-color: var(--yellow3);
-    border-radius: 4rem;
+
+@media (min-width: 1000px) {
+    .box-nav{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: flex-end;
+    }
+
+    .nav-bar{
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+    .nav-bar a {
+        color: var(--darkgreen2);
+        text-decoration: none;
+        margin-right: 2rem;
+        padding: .8rem 1.5rem;
+    }
+    .nav-bar a:last-of-type{
+        margin-right: 0;
+    }
+  
+    .titles {
+        display: none;
+        flex-direction: column;
+        background-image: url("https://gallery.yopriceville.com/var/albums/Backgrounds/Vegetable_Background.jpg?m=1478277468");
+        background-size: cover;
+        padding: 4rem 4rem;
+        border-radius: 4rem;
+    }
+    .titles h2{
+        text-align: end;
+        color: var(--yellow3);
+        background-color: var(--darkgreen);
+        border-radius: 4rem;
+        padding: .5rem 1.5rem;
+        font-size: 2rem;
+        margin: .8rem 0;
+    }
+    .titles h2:last-of-type{
+        margin-bottom: 0;
+    }
 }
-.titles {
-    margin-top: 3rem;
-}
-.titles h2{
-    text-align: end;
-    color: var(--yellow3);
-    background-color: var(--darkgreen);
-    border-radius: 4rem;
-    padding: 1rem 2rem;
-    font-size: 2.5rem;
-}
-.flower1{
-    position: relative;
-    width: 6rem;
-    height: 6rem;
-    top: 330px;
-    left: 80px;
-}
-.flower2{
-    position: relative;
-    width: 6rem;
-    height: 6rem;
-    top: 390px;
-    left: 80px;
-}
-.flower3{
-    position: relative;
-    width: 6rem;
-    height: 6rem;
-    top: 430px;
-    left: 80px;
-}
+
+
 
 /* SECTION SLOGAN */
 
