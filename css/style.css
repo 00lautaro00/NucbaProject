@@ -48,6 +48,7 @@ p{
 /* HEADER */
 header{
     background-image: url("https://gallery.yopriceville.com/var/albums/Backgrounds/Vegetable_Background.jpg?m=1478277468");
+    background-position: center center;
     background-size:cover;
     width: 100%;
     border-bottom-right-radius: 50%;
@@ -56,15 +57,23 @@ header{
     border-top-right-radius: 4rem;
 }
 .header{
-    margin: 2rem 0;
     padding: 5rem;
+    position: relative;
 }
-.header-bg{
-position: relative;
-top: 1000px ;
-  background-color: #38383842;
-  padding: 20rem 20rem;
+header::before {
+    content: '';
+    background-color: #3838386c;
+    width: 125rem;
+    height: 39.5rem;
+    position: absolute;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    overflow: hidden;
 }
+
+
 /* LOGO */
 .box-logo{
     text-align: center;
@@ -138,7 +147,7 @@ top: 1000px ;
         margin-top: 0;
     }
     .nav-bar a {
-        color: var(--darkgreen2);
+        color: white;
         text-decoration: none;
     }
     
