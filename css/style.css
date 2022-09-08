@@ -49,6 +49,11 @@ p{
 .bg-yellow {
     background-color:var(--yellow1);
 }
+.shadow{
+    box-shadow: 2px 0px 49px 14px rgba(89,120,67,0.58);
+-webkit-box-shadow: 2px 0px 49px 14px rgba(89,120,67,0.58);
+-moz-box-shadow: 2px 0px 49px 14px rgba(89,120,67,0.58);
+}
 .shadow-bottom{
     box-shadow: 0px 26px 28px 13px rgba(89,120,67,0.81);
     -webkit-box-shadow: 0px 26px 28px 13px rgba(89,120,67,0.81);
@@ -261,10 +266,9 @@ header::before {
 /* SECTION SLOGAN */
 
 .box-slogan{
-    margin-top: 4rem;
     border-radius: 4rem;
     width: 100%;
-    padding: 0 5rem;
+    padding: 1rem 5rem;
     border-right:  5px solid  #383838;
     box-shadow: 16px 0px 10px -10px rgba(56,56,56,1);
     -webkit-box-shadow: 16px 0px 10px -10px rgba(56,56,56,1);
@@ -327,6 +331,59 @@ header::before {
     border-radius: 40%;
     height: 30rem;
 }
+/* SECTION MENU */
+.box-menu{
+    background-color: var(--yellow1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 3rem;
+    border-radius: 4rem;
+    padding: 4rem 0;
+}
+.box-food{
+    background-image: url(../assets/food/bg-food.jpg);
+    background-position: cover;
+    background-size: auto;
+    border-radius: 1rem;
+    padding: .5rem .5rem;
+    width: 25rem;
+
+}
+
+.food{
+    display: flex;
+    justify-content: space-around;
+}
+.food-image img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    box-shadow: 2px 0px 49px 14px rgba(89,120,67,0.58);
+-webkit-box-shadow: 2px 0px 49px 14px rgba(89,120,67,0.58);
+-moz-box-shadow: 2px 0px 49px 14px rgba(89,120,67,0.58);
+}
+.title-food{
+    color: rgb(252,225,91);
+color: linear-gradient(90deg, rgba(252,225,91,1) 42%, rgba(68,120,31,0.8799894957983193) 81%, rgba(89,120,67,0.7539390756302521) 100%);
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+.food-text{
+    max-width: 10rem;
+}
+
+.food-text p{
+    background-color: #fce15bf1;
+    color: var(--dark);
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    box-shadow: 2px 0px 49px 14px rgba(89,120,67,0.58);
+-webkit-box-shadow: 2px 0px 49px 14px rgba(89,120,67,0.58);
+-moz-box-shadow: 2px 0px 49px 14px rgba(89,120,67,0.58);
+}
 
 /* FOOTER */ 
 .footer {
@@ -335,7 +392,7 @@ header::before {
     align-items: center;
     background-color: var(--yellow1);
     margin-top: 4rem;
-    padding: 6rem 0;
+    padding: 4rem 0;
     border-top-right-radius: 4rem;
     border-top-left-radius: 4rem;
 
