@@ -29,6 +29,9 @@ html {
 .mt-2{
     margin-top: 5rem;
 }
+.mb-2{
+    margin-bottom: 2rem;
+}
 .mg-rght-lft{
     margin-left:4rem;
     margin-right: 4rem;
@@ -853,27 +856,75 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 6rem;
-    background-color: #fce15b79;
+    padding: 0 2rem;
+    /* background-color: #fce15b25; */
+    background-color: var(--yellow1);
     box-shadow: -14px 0px 20px 1px rgba(0,0,0,0.75);
     -webkit-box-shadow: -14px 0px 20px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: -14px 0px 20px 1px rgba(0,0,0,0.75);
 
 }
 .card-form{
-  
-    padding: 0 4rem;
+    padding: 4rem 4rem;
+    background-color: var(--bg-green);
+    border-radius: 4rem;
+
 }
-input:not(.subtmit){
-    border: none;
-    padding: .8rem 3rem;
-    background-color: #fce15bb4;
+.title{
+    margin-bottom: 6rem;
+}
+.title h2{
+    font-size: 3.2rem;
     color: var(--dark);
-    font-size: 1.8rem;
     
 }
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.box-names{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+.box-datas label{
+    margin-left: 0;
+}
+input:not(.btn-submit){
+    border: none;
+    padding: .6rem .5rem;
+    background-color: #fce15bb4;
+    color: var(--dark);
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    
+}
+
 label{
     color:var(--dark);
-    font-size: 2.2rem;
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+}
+.lastname{
+    margin-left: 1.5rem;
+}
+.box-submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-submit{
+    padding: .8rem 5rem;
     font-weight: 700;
+    border-radius: 1rem;
+    border: none;
+background-color: #fce15bb4;
+    color: var(--dark);
+    font-size: 1.6rem;
+}
+.btn-submit:hover{
+    background-color: var(--darkgreen2);
+    color: var(--yellow1);
 }
