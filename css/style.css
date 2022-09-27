@@ -218,6 +218,7 @@ a{
     box-shadow: 2px 3px 5px var(--bgcolor) inset;
     border-radius: 4rem;
     transition: 1s;
+    padding: .8rem 1.4rem;
 }
 
 @media (min-width: 800px) {
@@ -237,9 +238,7 @@ a{
     }
 }
 
-.titles{
-    display: none;
-}
+
     .box-nav{
        display: flex;
        flex-direction: column;
@@ -249,16 +248,16 @@ a{
 
     .nav-bar{
         font-weight: 700;
-        font-size: 1.4rem;
     }
     .nav-bar a {
-        padding: .8rem 1.5rem;
+        font-size: 1rem;
+        padding-top: 1rem;
     }
     .nav-bar a:last-of-type{
         margin-right: 0;
     }
   
-    .titles {
+    /* .titles {
         display: none;
         flex-direction: column;
         background-image: url("https://gallery.yopriceville.com/var/albums/Backgrounds/Vegetable_Background.jpg?m=1478277468");
@@ -277,56 +276,136 @@ a{
     }
     .titles h2:last-of-type{
         margin-bottom: 0;
-    }
+    } */
 
 /*SECTION SLIDER */
-.slider-frame{
-    margin: 2rem 0;
-    width: 100%;
-    padding: 2em;
-    
-}
-.slider{
+.container-slider{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content:space-between;
     align-items: center;
-    animation: slide 15s infinite alternate ease-in-out;
-    overflow: hidden;
-    width: 100%;
-}
-.slider img{
-    width: calc(50% / 2 - 5em);
-}
-/* .points {
-    width: 100%;
-    background-color: var(--primary);
-    padding: 1em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: center;
+    /* margin-top: 2rem; */
+    margin-bottom: 4rem;
+    /* border-top: 1rem solid #d9a404f3;*/
+    border-bottom: 1rem solid #d9a404ee; 
+}
+.container-all{
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    opacity: 0.9;
+    overflow: hidden;
+}
+.item-slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 100%;
+}
+.item-slide img {
+    width: 100%;
+    height: 200%;
+}
+.slide{
+    display: flex;
     align-items: center;
-    list-style: none;
+    max-width: 100%;
+    max-height: 100%;
+    /* padding: 1rem 0; */
+    transform: translate3d(0,0,0);
+    transition: all 600ms;
+    animation: slide 15s infinite alternate forwards;
+
 }
-.point{
-    width: 2em;
-    height: 2em;
-    background-color: var(--bgcolor);
-    margin: 1em;
-} */
-
-
 @keyframes slide {
-    0% {margin-left: 40%;}
-    30%{margin-left: 40%;}
-    35% {margin-left: -40%;}
-    65% {margin-left: -40%;}
-    70% {margin-left: 40%;}
-    100% {margin-left: 40%;}
-        
+    33%{
+        transform: translate3d(calc(-100% * 0),0,0);
+        border-radius: 40%;
+    }
+    66%{
+        transform: translate3d(calc(-100%*1), 0,0);
+    }
+    100%{
+        transform: translate3d(calc(-100% *2 ),0 , 0);
+    }
 }
+.pagination {
+    position:absolute;
+    bottom: 40px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    background:rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+.pagination-item:hover{
+    transform: scale(2);
+}
+.pagination-item img {
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+
+}
+.pagination-item:hover img {
+    opacity: 1;
+    transform: scale(1);
+}
+input[id="1"]:checked ~ .slide {
+    animation: none;
+    transform: translate3d(0,0,0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: #fff;
+}
+input[id="2"]:checked ~ .slide {
+    animation: none;
+    transform: translate3d(calc(-100% *1),0,0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: #fff;
+}
+input[id="3"]:checked ~ .slide {
+    animation: none;
+    transform: translate3d(calc(-100% *2),0,0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: #fff;
+}
+
+.slider-text{
+    position: absolute;
+    content: '';
+    right: 20px;
+    z-index: 1;
+    background-color: #0d0d0dbd;
+    padding: 6rem 4rem;
+    color: var(--complement2);
+}
+
 
 /* SECTION MENU */
 .box-menu{
