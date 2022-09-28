@@ -204,6 +204,66 @@ a{
 }
 
 /*Nav */
+.menu-burger{
+    display: flex;
+}
+.menu {
+    background:#d9a404de;
+    border-radius: .4rem;
+    padding: .6rem 0;
+    font-size: 2.6rem;
+    position: fixed;
+    top:10px;
+    z-index: 2;
+}
+.burger-nav{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#d9a404f1;
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.burger-nav a {
+    margin-bottom: 2rem;
+    color: var(--bgcolor);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.close{
+    font-size: 3rem;
+    position: absolute;
+    top:20px;
+    right: -15px;
+}
+
+
+input[id="4"]:checked ~ .burger-nav{
+    display: flex;
+    /* animation: menu-close 2s; */
+    margin-top: -500%;
+    transition: 1s;
+}
+input[id="5"]:checked ~ .burger-nav{
+    display: flex;
+    
+    animation: menu-animation 1s;
+}
+@keyframes menu-animation{
+    0%{
+        margin-top: -500%;
+    }
+    100%{
+        margin-top: 0%;
+    }
+}
+
+
 
 .nav-bar{
     display: none;
@@ -229,9 +289,12 @@ a{
         font-size: 1.4rem;
         margin-top: 2rem;
     }
+    .menu-burger{
+        display: none;
+    }
     
     .nav-bar a {
-        margin-right: 2rem;
+        margin-right: 3rem;
     }
     .nav-bar a:last-of-type{
         margin-right: 0;
@@ -401,9 +464,20 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     content: '';
     right: 20px;
     z-index: 1;
-    background-color: #0d0d0dbd;
-    padding: 6rem 4rem;
-    color: var(--complement2);
+    background-color: #0d0d0da1;
+    padding: 1rem 4rem 6rem 4rem;
+    border-radius: .5rem;
+}
+.slider-text h2{
+    font-size: 2.6rem;
+    color: #d9a404e8;
+}
+.slider-p{
+    margin-top: 2rem;
+    width: 80%;
+}
+.slider-p p{
+    color: #d9a404e8;
 }
 
 
@@ -969,8 +1043,8 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     position: absolute;
     transform: rotate(-45deg);
     color: var(--complement2);
-    left: 3.5rem;
-    top: 2rem;
+    left: 3.3rem;
+    top: 2.5rem;
     background-color:#d93232bb;
      /* background-color:var(--dark); */
     border-radius: 1rem;
