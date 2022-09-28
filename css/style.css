@@ -92,7 +92,7 @@ a{
 /* HEADER */
 .header-banner{
     /* background-image: url("https://gallery.yopriceville.com/var/albums/Backgrounds/Vegetable_Background.jpg?m=1478277468");  */
-    background-color: #d93232a8;
+    background-color: #d93232d3;
     width: 100%;
     position: relative;
 }
@@ -105,7 +105,7 @@ a{
     -webkit-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
     -moz-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
 }
-@media (min-width: 850px){
+@media (min-width: 700px){
         .header{
             justify-content: space-around;
             padding: 0rem;
@@ -129,13 +129,13 @@ a{
 /* LOGO */
 .box-logo{
     text-align: center;
-    background-color:#0D0D0D;
+    background-color:#0d0d0de8;
     border-radius: 50%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    box-shadow: 3px 4px 10px 7px rgba(0,0,0,0.7);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* box-shadow: 3px 4px 10px 7px rgba(0,0,0,0.7);
     -webkit-box-shadow: 3px 4px 10px 7px rgba(0,0,0,0.7);
-    -moz-box-shadow: 3px 4px 10px 7px rgba(0,0,0,0.7);
+    -moz-box-shadow: 3px 4px 10px 7px rgba(0,0,0,0.7); */
    
 }
 .logo {
@@ -167,7 +167,7 @@ a{
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   
     .box-logo{
         display: flex;
@@ -213,7 +213,8 @@ a{
     padding: .6rem 0;
     font-size: 2.6rem;
     position: fixed;
-    top:10px;
+    top:2%;
+    right: -4%;
     z-index: 2;
 }
 .burger-nav{
@@ -277,11 +278,11 @@ input[id="5"]:checked ~ .burger-nav{
     background-color: #d93232a8;
     box-shadow: 2px 3px 5px var(--bgcolor) inset;
     border-radius: 4rem;
-    transition: 1s;
+    transition: .5s;
     padding: .8rem 1.4rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
     .nav-bar{
         display: flex;
         flex-direction: row;
@@ -320,44 +321,24 @@ input[id="5"]:checked ~ .burger-nav{
         margin-right: 0;
     }
   
-    /* .titles {
-        display: none;
-        flex-direction: column;
-        background-image: url("https://gallery.yopriceville.com/var/albums/Backgrounds/Vegetable_Background.jpg?m=1478277468");
-        background-size: cover;
-        padding: 4rem 4rem;
-        border-radius: 4rem;
-    }
-    .titles h2{
-        text-align: end;
-        color: var(--primary);
-        background-color: var(--primary);
-        border-radius: 4rem;
-        padding: .5rem 1.5rem;
-        font-size: 2rem;
-        margin: .8rem 0;
-    }
-    .titles h2:last-of-type{
-        margin-bottom: 0;
-    } */
+
 
 /*SECTION SLIDER */
 .container-slider{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-top: 2rem; */
     margin-bottom: 4rem;
-    /* border-top: 1rem solid #d9a404f3;*/
     border-bottom: 1rem solid #d9a404ee; 
 }
 .container-all{
     position: relative;
     width: 100%;
-    height: 25rem;
+    height: 15rem;
     opacity: 0.9;
     overflow: hidden;
 }
+
 .item-slide{
     position: relative;
     display: flex;
@@ -367,7 +348,7 @@ input[id="5"]:checked ~ .burger-nav{
     width: 100%;
 }
 .item-slide img {
-    width: 100%;
+    width: 170%;
     height: 200%;
 }
 .slide{
@@ -375,11 +356,24 @@ input[id="5"]:checked ~ .burger-nav{
     align-items: center;
     max-width: 100%;
     max-height: 100%;
-    /* padding: 1rem 0; */
     transform: translate3d(0,0,0);
     transition: all 600ms;
     animation: slide 15s infinite alternate forwards;
 
+}
+@media(min-width:780px){
+    .container-all{
+        height: 25rem;
+    }
+    .slide{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+.item-slide img {
+    width: 100%;
+    height: 200%;
+}
 }
 @keyframes slide {
     33%{
@@ -395,7 +389,7 @@ input[id="5"]:checked ~ .burger-nav{
 }
 .pagination {
     position:absolute;
-    bottom: 40px;
+    bottom: 20px;
     left: 0;
     display: flex;
     flex-wrap: wrap;
@@ -408,8 +402,8 @@ input[id="5"]:checked ~ .burger-nav{
     flex-direction: column;
     align-items: center;
     border: 2px solid white;
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
@@ -417,6 +411,16 @@ input[id="5"]:checked ~ .burger-nav{
     margin: 0 10px;
     text-align: center;
     transition: all 300ms;
+}
+@media(min-width:700px){
+    .pagination {
+        bottom: 40px;
+        left: 0;
+    }
+    .pagination-item{
+        width: 1.6rem;
+        height: 1.6rem;
+    }
 }
 .pagination-item:hover{
     transform: scale(2);
@@ -458,26 +462,33 @@ input[id="3"]:checked ~ .slide {
 input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     background: #fff;
 }
-
 .slider-text{
-    position: absolute;
-    content: '';
-    right: 20px;
-    z-index: 1;
-    background-color: #0d0d0da1;
-    padding: 1rem 4rem 6rem 4rem;
-    border-radius: .5rem;
+    display: none;
+}
+@media(min-width:800px){
+    .slider-text{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        content: '';
+        right: 2%;
+        z-index: 1;
+        background-color: #0d0d0da1;
+        padding: 2% 0% 3% 2%;
+        border-radius: .5rem;
+    }
 }
 .slider-text h2{
-    font-size: 2.6rem;
-    color: #d9a404e8;
+    font-size: 2rem;
+    color: #d9a404f8;
 }
 .slider-p{
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 80%;
 }
 .slider-p p{
-    color: #d9a404e8;
+    color: #d9a404d2;
+    font-size: 1rem;
 }
 
 
@@ -510,32 +521,36 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
    background: rgb(13,13,13);
 background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(217,50,50,1) 50%, rgba(13,13,13,0.5438550420168067) 100%);
     border-bottom: 15px solid var(--complement2);
-    border-bottom-left-radius: 10rem;
-    border-bottom-right-radius: 10rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
     width: 90%;
     height: 100%;
-    margin: 3rem 0;
-    padding: 0 1rem; 
+    margin: 4rem 0;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     box-shadow: -10px 10px 10px var(--bgcolor);
+    position: relative;
 }
 .container-food{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
+    width: 100%;
 }
 .image{
-    padding: .8rem .8rem;
+    padding: .5rem .5rem;
     border-radius:none;
     box-shadow: .5rem .5rem .5rem var(--bgcolor) inset;
     background-color: #d9a404b0;
+    height: 90%;
 }
 
 .image img{
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     box-shadow: 5px 5px 5px var(--bgcolor);
 }
 .image img:hover{
@@ -548,12 +563,17 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     margin-top: 1rem;
     color: var(--bgcolor);
     font-size: 1.2rem;
+    text-align: center;
     box-shadow: .5rem .5rem .5rem var(--bgcolor) ;
     background-color: #d9a404f6;
     border-bottom: .5rem solid var(--bgcolor);
     border-top-left-radius:2rem ;
     border-top-right-radius:2rem ;
     padding: .8rem 1rem;
+    position: absolute;
+    bottom: -90px;
+    left: 0;
+    right: 0;
 
 }
 .box-food-text{
@@ -563,14 +583,15 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     width: 100%;
 }
 .food-text{
-    padding: .5rem 1.2rem;
+    padding: .5rem 1rem;
     /* background-color: #d9a404b0; */
     background-color: var(--primary);
     box-shadow: 3px 2px 6px 5px rgba(0,0,0,0.7) ;
     -webkit-box-shadow: 3px 2px 6px 5px rgba(0,0,0,0.7) ;
     -moz-box-shadow: 3px 2px 6px 5px rgba(0,0,0,0.7) ;
-    margin-bottom: .8rem;
-    width: 100%;
+    margin: .8rem 0;
+    width: 80%;
+    text-align: center;
 }
 .food-text:hover{
     transform: scale(1.5, 1.5);
@@ -595,48 +616,47 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     }
     .box-food{
         flex-direction: row;
-        justify-content: center;
         flex-wrap: wrap;
-        max-width: 90%;
+        justify-content: space-around;
+        align-items: center;
         }
     .food{
         flex-direction: row;
         justify-content: space-around;
-        padding: 1rem .8rem;
         width: 30rem;
-        height: 20rem;
+        height: 22rem;
         margin-right: 4rem;
+        border-top-right-radius:50vh;
+    border-bottom-right-radius: 1vh;
+    border-bottom-left-radius: 50vh;
+
     }
+    .image{
+        height: 100%;
+    }
+ 
     .title-food{
         margin-top: 2rem;
         font-size: 1.5rem;
         padding: .5rem .8rem;
-    
+        right: unset;
+        left: 50px;
     }
     .box-food-text{
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
     .food-text{
+        display: flex;
+        align-items: center;
         max-width: 12rem;
         width: 100%;
+        height: 50%;
     }
 }
-@media(min-width:800px){
-    .box-food{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        }
-}
-@media(min-width:1330px){
-   
-    .food{
-        margin-right: 0rem;
-    }
-}
+
+
 
 /* SECTION SLOGAN */
 
