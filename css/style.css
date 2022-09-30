@@ -97,9 +97,10 @@ a{
     position: relative;
 }
 .header{
-    padding: 4rem;
+    padding-top: 2rem;
     position: relative;
     display: flex;
+    padding: 2rem;
     justify-content: center;
     box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
     -webkit-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
@@ -128,47 +129,47 @@ a{
 
 /* LOGO */
 .box-logo{
-    text-align: center;
-    background-color:#0d0d0de8;
-    border-radius: 50%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    /* box-shadow: 3px 4px 10px 7px rgba(0,0,0,0.7);
-    -webkit-box-shadow: 3px 4px 10px 7px rgba(0,0,0,0.7);
-    -moz-box-shadow: 3px 4px 10px 7px rgba(0,0,0,0.7); */
-   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0d0d0dd5;
+    padding: 1rem .8rem;
+    border-top-right-radius:50vh;
+    border-top-left-radius:5vh;
+    border-bottom-left-radius:50vh;
+    border-bottom-right-radius:50vh;
 }
 .logo {
-    width: 10rem;
-    height: 10rem;
+    width: 4rem;
+    height: 4rem;
 }
 .logo-title {
     display: flex;
+    position: relative;
+    top: 0px;
 }
 .logo-title h1 {
     font-size: 1.2rem;
-    color: var(--secondary);
-    border-bottom: 4px solid var(--primary);
-    border-radius: 4rem;
-    
+    color: var(--complement2);
 
 }
 .title-left{
     position: relative;
-    top: -30px;
-    left: 30px;
-    transform: rotate(35deg);
+    top: -20px;
+    left: -10px;
+    transform: rotate(45deg);
 }
+
 .title-right{
     position: relative;
-    top: -30px;
-    right: -40px;
-    transform: rotate(-35deg);
+    top: -20px;
+    right: -10px;
+    transform: rotate(-45deg);
 }
 
 
 @media (min-width: 700px) {
-  
+
     .box-logo{
         display: flex;
         flex-direction: row;
@@ -181,23 +182,25 @@ a{
     .logo-title h1 {
         font-size: 1.4rem;
         padding: 0 0;
-        border: none;
     }
     .title-left{
-        position: relative;
-        top: 50px;
-        left: -140px;
+        position: absolute;
+        top: -50px;
+        left: -40px;
         transform: rotate(0deg);
     }
+    .title-center{
+        display: none;
+    }
     .title-right{
-        position: relative;
-        top: 50px;
-        right:70px;
+        position: absolute;
+        top: -50px;
+        right:-35px;
         transform: rotate(0deg);
     }
     .logo {
-        width: 6rem;
-        height: 6rem;
+        width: 4rem;
+        height: 4rem;
     }
     
   
@@ -690,10 +693,11 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     flex-direction: column;
     justify-content: center;
     border-radius: 2rem;
+    height: 20rem;
     width: 100%;
     padding: 1rem 0rem;
     border-top:  5px solid  var(--bgcolor);
-   margin-top: 6rem;
+    margin-top: 6rem;
    
 }
 @media (min-width : 400px) {
@@ -719,16 +723,17 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     
 }
 .box-slogan h1{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: var(--bgcolor);
     width: 100%;
     padding: 0 0.5rem;
+    margin-bottom: 1rem;
 }
 .p-slogan{
     color: var(--bgcolor);
     margin-bottom: 2rem;
     width: 100%;
-    font-size: 1rem;
+    font-size: .9rem;
     text-align: center;
 }
 @media (min-width : 400px) {
@@ -760,9 +765,9 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
 
 
 .btn{
-    padding: 1rem 1rem;
+    padding: .8rem 1rem;
     border-radius: 4rem;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 800;
     margin-right: 3rem;
     cursor: pointer;
@@ -896,9 +901,7 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     align-items: center;
     background-color: var(--primary);
     margin-top: 4rem;
-    padding: 4rem 0;
-    border-top-right-radius: 4rem;
-    border-top-left-radius: 4rem;
+    padding: 3rem 0;
 
 }
 @media (min-width:800px) {
@@ -907,56 +910,49 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
         justify-content: space-around;
     }
 }
+
 .box-logo-footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    background-color: #0d0d0dd5;
     margin-bottom: 4rem;
-    background-color: var(--bgcolor);
-    border-radius: 50%;
-    box-shadow: 3px 4px 10px 7px rgba(0,0,0,0.7);
-    -webkit-box-shadow: 3px 4px 10px 7px rgba(0,0,0,0.7);
-    -moz-box-shadow: 3px 4px 10px 7px rgba(0,0,0,0.7);
-}
-@media (min-width : 800px) {
-    .box-logo-footer{
-        margin-left: 0rem;
-        margin-bottom: 0rem;
-        margin-right: 4rem;
-        text-align: center;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    
-}
-.logo-footer{
-    width: 8rem;
-    height: 8rem;
+    padding: 1rem .8rem;
+    border-top-right-radius:50vh;
+    border-top-left-radius:5vh;
+    border-bottom-left-radius:50vh;
+    border-bottom-right-radius:50vh;
 
+}
+
+
+.logo-footer{
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.5rem;
 }
 .logo-title-footer {
     display: flex;
+    position: relative;
+    top: -70px;
 }
 .logo-title-footer h1 {
     font-size: 1.2rem;
-    color: var(--secondary);
-    border-bottom: 4px solid var(--primary);
-    border-radius: 4rem;
+    color: var(--complement2);
 
 }
 .title-left-footer{
     position: relative;
-    top: -25px;
-    left: 2px;
-    transform: rotate(35deg);
+    top: -20px;
+    left: -10px;
+    transform: rotate(45deg);
 }
+
 .title-right-footer{
     position: relative;
-    top: -25px;
-    right: -2px;
-    transform: rotate(-35deg);
+    top: -20px;
+    right: -10px;
+    transform: rotate(-45deg);
 }
 
 .contact-footer{
@@ -1051,54 +1047,13 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
 }
 .form-header{
     background-color:#fce15be5;
-    margin-bottom: 4rem;
     position: fixed;
     width: 100%;
-    box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
+    /* box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
     -webkit-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
-    -moz-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
+    -moz-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ; */
 }
-.form-logo-title{
-    display: none;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0;
-    position:relative;
-}
-@media(min-width:700px){
-    .form-logo-title{
-        display: flex;
-    }
-}
-.form-title-left{
-    position: absolute;
-    transform: rotate(-45deg);
-    color: var(--complement2);
-    left: 3.3rem;
-    top: 2.5rem;
-    background-color:#d93232bb;
-     /* background-color:var(--dark); */
-    border-radius: 1rem;
-}
-.form-title-left h1{
-    margin: 0 1rem 0 3rem;
-    font-size: 1.8rem;
-}
-.form-title-right{
-    position: absolute;
-    transform: rotate(45deg);
-    color: var(--complement2);
-    right: -8rem;
-    top: 2.5rem;
-     /* background-color:#8cf7409d; */
-    background-color:#d93232f6;
-    border-radius: 1rem;
-}
-.form-title-right h1{
-    margin: 0 .5rem 0 4rem;
-    font-size: 1.8rem;
-    
-}
+
 #a-footer a{ 
     color: var(--primary); 
 }
@@ -1118,96 +1073,69 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: #fce15b25; */
-    background-image: url(../assets/img/contactUs-bg.jpg);
+    background-image: url("https://wallpapercave.com/wp/wp8746186.jpg");
+    background-position: center;
+    background-size: cover;
     width: 100%;
     height: 100%;
-    padding: 10rem;
-    box-shadow: 0px 15px 10px 0px rgba(0,0,0,0.75);
+    /* box-shadow: 0px 15px 10px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 15px 10px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 15px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 15px 10px 0px rgba(0,0,0,0.75); */
     
 }
 .card-form{
-    padding: 4rem 2rem;
-    background-color: #d93232ec;
-    border-top-left-radius: 8rem;
-    border-bottom-right-radius: 8rem;
+    padding: 6rem 2rem;
+    border-radius: 4rem;
     /* background-image: url(../assets/img/contactUs-bg.jpg); */
-    box-shadow: -6px 8px 10px 6px rgba(0,0,0,0.7) inset;
+    /* box-shadow: -6px 8px 10px 6px rgba(0,0,0,0.7) inset;
         -webkit-box-shadow: -6px 8px 10px 6px rgba(0,0,0,0.7) inset;
-        -moz-box-shadow: -6px 8px 10px 6px rgba(0,0,0,0.7) inset;
+        -moz-box-shadow: -6px 8px 10px 6px rgba(0,0,0,0.7) inset; */
     
 }
 @media(min-width:860px){
-    .banner-form{
-        display: block;
-        background-image: url(../assets/img/contactUs-bg.jpg);
-        background-position: center;
-        background-size: cover;
+    .form-container{
+        display: flex;
+        background-image: url("https://wallpapercave.com/wp/wp8746186.jpg");
         width: 100%;
         height: 100%;
-        padding: 50rem 15rem;
-        box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) inset;
--webkit-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) inset;
--moz-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) inset;
-       
         
+    }
+    .banner-form{
+        display: flex;
+        padding: 40% 20%;
+       
     }
     .box-form{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: auto;
+        width: 100%;
         height: auto;
-        /* background-color: #fce15b25; */
         background-image: none;
-        background-color: #0d0d0d7e;
-        box-shadow: -6px 8px 10px 6px rgba(0,0,0,0.7);
-        -webkit-box-shadow: -6px 8px 10px 6px rgba(0,0,0,0.7);
-        -moz-box-shadow: -6px 8px 10px 6px rgba(0,0,0,0.7);
+        background-color: #DF7676;
     }
     .card-form{
-        padding: 10rem 6rem;
-        /* background-color: #d9a404c7; */
-        /* background-image: url(../assets/img/bowl-576397.svg); */
-        background-image: url(../assets/img/bowl-576397.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size:100%;
-        border-top-left-radius: 15rem;
-        border-bottom-right-radius: 15rem;
-        background-color: #d93232a6;
         /* background-image: url(../assets/img/contactUs-bg.jpg); */
-        box-shadow: 0px 0px 7px 25px rgba(0,0,0,0.75) inset;
--webkit-box-shadow: 0px 0px 7px 25px rgba(0,0,0,0.75) inset;
--moz-box-shadow: 0px 0px 7px 25px rgba(0,0,0,0.75) inset;
+        /* box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.75) inset; */
+
         
     }
 }
 
 
 
-
-@media(min-width:1300px) {
-    .box-form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
- 
-}
 .title{
     margin-bottom: 6rem;
     max-width: 50%;
 }
 .title h2{
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     padding: 1rem 0 1rem 1rem;
-    color: var(--complement2);
-    border-bottom: 5px solid;
+    color: var(--bgcolor);
+    border-bottom: 5px solid #fce15bb4;
     border-bottom-left-radius:4rem ; 
     /* box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) inset;
 -webkit-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) inset;
@@ -1233,6 +1161,7 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
 }
 .lastname{
     margin-bottom: 2rem;
+
 }
 @media(min-width:1200px) {
     .box-names{
@@ -1257,27 +1186,25 @@ input:not(.btn-submit){
     color: var(--bgcolor);
     font-size: 1rem;
     border-radius: .5rem;
-    box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.75) inset;
--webkit-box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.75) inset;
--moz-box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.75) inset;
+    
 outline-color: var(--complement2);    
 }
 
 label{
     color:var(--bgcolor);
-    font-weight: 700;
     font-size: 1.2rem;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
 }
 .box-submit{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2rem;
 }
 .btn-submit{
-    padding: .8rem 5rem;
+    padding: .5rem 4rem;
     font-weight: 700;
-    border-radius: 1rem;
+    border-radius: 4rem;
     border: none;
 background-color: #fce15bb4;
     color: #d93232c5;
@@ -1292,4 +1219,7 @@ background-color: #fce15bb4;
     box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.75) inset;
 -webkit-box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.75) inset;
 -moz-box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.75) inset;
+}
+.footer-form{
+    margin-top: 0;
 }
