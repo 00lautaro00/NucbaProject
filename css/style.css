@@ -1129,7 +1129,7 @@ background-color: #fce15bb4;
 
 .box-contactus{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     background-color: var(--complement4);
     width: 100%;
 }
@@ -1141,14 +1141,26 @@ background-color: #fce15bb4;
 
 .box-slogan{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 20rem;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 35rem;
     width: 100%;
 background-color: #fce15bb4;
-   
 }
-
+.slogan{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+}
+.slogan-image{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    width: 100%;
+    height: 80%;
+}
 
 .box-slogan h1{
     font-size: 1.4rem;
@@ -1166,7 +1178,7 @@ background-color: #fce15bb4;
 }
 @media (min-width : 400px) {
     .box-slogan h1{
-        font-size: 3rem;
+        font-size: 2.4rem;
         width: 100%;
     }
     .p-slogan{
@@ -1177,20 +1189,15 @@ background-color: #fce15bb4;
     }
     
 }
-
-@media (min-width : 650px) {
-    .box-slogan h1{
-        margin: 4rem 0;
-        width: 60%;
-    }
-    .p-slogan{
-        margin-bottom: 2rem;
-        width: 80%;
-        font-size: 1.8rem;
-    }
-    
+.box-slogan-2{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 25rem;
+    width: 100%;
+background-color: var(--complement3);
 }
-
 
 .btn{
     padding: .8rem 1rem;
