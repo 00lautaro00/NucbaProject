@@ -79,9 +79,9 @@ p{
 
 }
 .shadow-top{
-    box-shadow: 3px 2px 6px 5px rgba(0,0,0,0.7) inset;
-    -webkit-box-shadow: 3px 2px 6px 5px rgba(0,0,0,0.7) inset ;
-    -moz-box-shadow: 3px 2px 6px 5px rgba(0,0,0,0.7) inset;
+    box-shadow: 3px 2px 6px 10px rgba(0,0,0,0.7) ;
+    -webkit-box-shadow: 3px 2px 6px 10px rgba(0,0,0,0.7)  ;
+    -moz-box-shadow: 3px 2px 6px 10px rgba(0,0,0,0.7) ;
     
 }
 .icons-color{
@@ -250,8 +250,8 @@ a{
     transform: rotate(-45deg);
 }
 .icons{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     /* border: 3px solid #0d0d0dcb;
     border-radius: 50%; */
     position: relative;
@@ -267,7 +267,7 @@ a{
 .icons-face::after{
     position: absolute;
     content: "f";
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     font-weight: 900;
     font-family: 'Inter Tight', sans-serif;
     top:-5px;
@@ -285,7 +285,7 @@ a{
 .icons-linkedin::after{
     position: absolute;
     content: "in";
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
     top: 0px;
@@ -617,6 +617,9 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     align-items: center;
     margin: 4rem 0;
     padding: 4rem 1rem;
+    border-top: 5px solid var(--complement2);
+    border-bottom: 5px solid var(--complement2);
+    position: relative;
 }
 .box-title{
     text-align: center;
@@ -624,9 +627,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     padding: 0 2rem;
     color: var(--bgcolor);
     background-color: #d9a404e5;
-    border-top-left-radius:4rem;
-    border-top-right-radius:4rem;
-    border-bottom: 1rem solid var(--bgcolor);
+    border-radius: .5rem;
 }
 .box-food{
     display: flex;
@@ -719,16 +720,33 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     color: var(--bgcolor);
     font-size: 1.1rem;
 }
-
+.box-btn{
+    position: absolute;
+    bottom: -25px;
+    
+}
+.btn-menu{
+    padding: .5rem 6rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background-color: var(--primary);
+    border-radius: .5rem;
+    border: none;
+}
 @media(min-width: 600px){
     .box-menu{
         margin: 4rem 3rem;
-        border-radius: 4rem;
+        border: .5rem solid var(--complement2);
+        border-radius: 1rem;
         padding: 4rem 0;
+        background-color: #0d0d0d86;
+        position: relative;        
     }
     .box-title{
         font-size: 2rem;
         padding: .5rem 2rem;
+        position: absolute;
+        top: -40px;
     
     }
     .box-food{
@@ -770,6 +788,20 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
         max-width: 12rem;
         width: 100%;
         height: 50%;
+    }
+    .box-btn{
+        position: absolute;
+        bottom: -43px;
+    }
+    .btn-menu{
+        padding: .6rem 8rem;
+        border: 2px solid var(--bgcolor);
+        border-bottom-left-radius: 50rem;
+        border-bottom-right-radius: 50rem;
+    }
+    .btn-menu:hover{
+        border: 1px solid var(--complement2);
+        color: var(--complement2);
     }
 }
 
@@ -862,7 +894,7 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
  }
  .contact h4 {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--dark);
     font-weight: 700;
  }
@@ -873,7 +905,7 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
 
  .nav-bar-footer{
      font-weight: 700;
-     font-size: 1.4rem;
+     font-size: 1rem;
      flex-direction: column;
      margin-bottom: 4rem;
      display: none;
@@ -905,7 +937,7 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
 .box-icons{
     display: flex;
     flex-direction: row;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 .box-icons a{
     margin-right: 1.6rem;
@@ -1137,33 +1169,105 @@ background-color: #fce15bb4;
     background-color: var(--complement3);
     width: 100%;
     height: 20rem;
+    z-index: 1;
+    text-align: center;
 }
-
 .box-slogan{
     display: flex;
-    justify-content: space-around;
     align-items: flex-end;
-    height: 35rem;
-    width: 100%;
-background-color: #fce15bb4;
+    height: 30rem;
+    background-color: #fce15bb4;
+    position: relative;
+    align-items: flex-end;
+}
+.box-slogan-2{
+    display: flex;
+        justify-content: space-around;
+        width: 100%;
+    flex-direction: row-reverse;
+    height: 20rem;
+    align-items: center;
+/* background-color: #df7676fa; */
+background-color: var(--complement3);
+position: relative;
+}
+.box-slogan-3{
+    display: flex;
+        justify-content: space-around;
+        width: 100%;
+    height: 20rem;
+    align-items: center;
+    background-color: #fce15bb4;
+position: relative;
+
 }
 .slogan{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem;
-}
-.slogan-image{
-    display: flex;
-    justify-content: center;
-    padding: 4rem;
-    width: 100%;
-    height: 80%;
+    align-items: center;
+    padding: 2rem;
 }
 
+.slogan-image{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    opacity: 0.3;
+    bottom: 0;
+}
+.slogan-image-2{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.2;
+}
+@media (min-width:700px) {
+    .box-slogan, .box-slogan-2, .box-slogan-3{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .box-slogan{
+        height: 30rem;
+        align-items: flex-end;
+        background-color: #fce15bb4;
+    }
+    .slogan-image{
+        display: flex;
+        justify-content: center;
+        padding: 5rem 5rem 2rem 5rem;
+        width: 100%;
+        height: 80%;
+    }
+    .slogan-image-2{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        opacity: 1;
+        padding-bottom: 2rem;
+        width: 100%;
+        height: 90%;
+    }
+    .slogan-image{
+        position:initial;
+        opacity: 1;
+    }
+}
+
+
+
+
 .box-slogan h1{
-    font-size: 1.4rem;
+    font-size: 2rem;
+    color: var(--bgcolor);
+    width: 100%;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+.box-slogan-2 h1, .box-slogan-3 h1{
+    font-size: 2rem;
     color: var(--bgcolor);
     width: 100%;
     padding: 0 0.5rem;
@@ -1173,30 +1277,14 @@ background-color: #fce15bb4;
     color: var(--bgcolor);
     margin-bottom: 2rem;
     width: 100%;
-    font-size: .9rem;
+    font-size: 1.2rem;
     text-align: center;
 }
-@media (min-width : 400px) {
-    .box-slogan h1{
-        font-size: 2.4rem;
-        width: 100%;
-    }
+@media (min-width:700px) {
     .p-slogan{
         text-align: start;
-        margin-bottom: 2rem;
-        width: 100%;
-        font-size: 1.4rem;
     }
     
-}
-.box-slogan-2{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: flex-end;
-    height: 25rem;
-    width: 100%;
-background-color: var(--complement3);
 }
 
 .btn{
