@@ -19,10 +19,9 @@
   }
 .body-bgGreen{
     /* background-color: var(--bg-green); */
-    background-image: url("https://wallpapercave.com/wp/wp8746186.jpg");
-    background-size:contain;
-    background-position: center;
-    background-repeat: repeat;
+    /* background-image: url("../assets/img/aple.svg"); */
+    background: rgb(217,50,50);
+    background: linear-gradient(279deg, rgba(217,50,50,1) 31%, rgba(13,13,13,0.835171568627451) 100%);
     font-family: 'Open Sans', sans-serif;
     position: relative;
 }
@@ -30,7 +29,7 @@
 
 body::after{
     content: '';
-    background-color: #0d0d0db4;
+    background-color: #0d0d0dc0;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -626,7 +625,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     font-size: 1.2rem;
     padding: 0 2rem;
     color: var(--bgcolor);
-    background-color: #d9a404e5;
+    background-color: #d9a404;
     border-radius: .5rem;
 }
 .box-food{
@@ -683,10 +682,8 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     font-size: 1.2rem;
     text-align: center;
     box-shadow: .5rem .5rem .5rem var(--bgcolor) ;
-    background-color: #d9a404f6;
-    border-bottom: .5rem solid var(--bgcolor);
-    border-top-left-radius:2rem ;
-    border-top-right-radius:2rem ;
+    background-color: #d9a404;
+    border-radius:.5rem ;
     padding: .8rem 1rem;
     position: absolute;
     bottom: -90px;
@@ -733,14 +730,33 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     border-radius: .5rem;
     border: none;
 }
-@media(min-width: 600px){
+@media(min-width: 700px){
     .box-menu{
-        margin: 4rem 3rem;
-        border: .5rem solid var(--complement2);
-        border-radius: 1rem;
-        padding: 4rem 0;
-        background-color: #0d0d0d86;
-        position: relative;        
+         margin: 4rem 0; 
+        /* border: .5rem solid var(--complement2); */
+        /* border-radius: 1rem; */
+         /* background-color: #0d0d0dab; */
+        border-radius: 10rem;
+        background-image: url(../assets/img/burger-slider.jpeg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: 1;        
+    }
+    .box-menu::after{
+        position:absolute;
+        content: '';
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* margin: 4rem 3rem; */
+        /* border: .5rem solid var(--complement2); */
+        /* border-radius: 1rem; */
+        background-color: #0d0d0da9;
+        /* border-radius: 20%; */
+        border-radius: 10rem;
+
     }
     .box-title{
         font-size: 2rem;
@@ -752,14 +768,14 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     .box-food{
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         }
     .food{
         flex-direction: row;
         justify-content: space-around;
-        width: 30rem;
-        height: 22rem;
+        width: 25rem;
+        height: 20rem;
         margin-right: 4rem;
         border-top-right-radius:50vh;
     border-bottom-right-radius: 1vh;
@@ -1197,7 +1213,7 @@ position: relative;
         width: 100%;
     height: 20rem;
     align-items: center;
-    background-color: #fce15bb4;
+    background-color: #fce15bea;
 position: relative;
 
 }
