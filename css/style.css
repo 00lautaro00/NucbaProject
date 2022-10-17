@@ -736,7 +736,7 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
         /* border: .5rem solid var(--complement2); */
         /* border-radius: 1rem; */
          /* background-color: #0d0d0dab; */
-        border-radius: 10rem;
+        /* border-radius: 10rem; */
         background-image: url(../assets/img/burger-slider.jpeg);
         background-position: center;
         background-size: cover;
@@ -755,7 +755,7 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
         /* border-radius: 1rem; */
         background-color: #0d0d0da9;
         /* border-radius: 20%; */
-        border-radius: 10rem;
+        /* border-radius: 10rem; */
 
     }
     .box-title{
@@ -775,7 +775,7 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
         flex-direction: row;
         justify-content: space-around;
         width: 25rem;
-        height: 20rem;
+        height: 15rem;
         margin-right: 4rem;
         border-top-right-radius:50vh;
     border-bottom-right-radius: 1vh;
