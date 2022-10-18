@@ -103,9 +103,9 @@ a{
     display: flex;
     padding: 2rem;
     justify-content: center;
-    box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
+    /* box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
     -webkit-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
-    -moz-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ;
+    -moz-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75) ; */
 }
 @media (min-width: 700px){
         .header{
@@ -607,6 +607,122 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     font-size: 1rem;
 }
 
+/*COMBO SECTION */
+.combo-section {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem 0;
+    position: relative;
+}
+.combo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem;
+    text-align: center;
+}
+.combo-image{
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    padding: 0 1rem;
+}
+.combo-image img{
+    width: 100%;
+    height: 100%;
+}
+.btn-combo{
+    padding: .5rem 2rem;
+    color: var(--complement2);
+    background: rgb(217,50,50);
+    background: linear-gradient(279deg, rgba(217,50,50,0.742734593837535) 0%, rgba(13,13,13,0.14889705882352944) 100%);
+    font-weight: 700;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: .5rem;
+    position: absolute;
+    bottom: -100px;
+    right: 0%;
+    left: 0%;
+}
+@media (min-width:800px) {
+    .combo-section {
+        display: flex;
+        flex-direction: row;
+        margin: 6rem 0;
+        position: initial;
+    }
+    .combo{
+        display: flex;
+        padding: 2rem 4rem;
+        text-align: start;
+        position: relative;
+    }
+    .combo-image{
+        padding: 0 2rem;
+        margin-top: 0;
+    }
+    .btn-combo{
+        padding: .5rem 4rem;
+        color: var(--complement2);
+        background: rgb(217,50,50);
+        background: linear-gradient(279deg, rgba(217,50,50,0.742734593837535) 0%, rgba(13,13,13,0.14889705882352944) 100%);
+        font-weight: 700;
+        font-size: 1.4rem;
+        border: none;
+        border-radius: .5rem;
+        position: absolute;
+        bottom: -90px;
+        right: 60px;
+        left: auto;
+    }
+    
+    
+    
+}
+.btn-combo:hover{
+    animation: btn .3s linear;
+    background: rgb(217,50,50);
+        background: linear-gradient(279deg, rgba(217,50,50,0.742734593837535) 0%, rgba(13,13,13,0.14889705882352944) 0%);
+    
+}
+@keyframes btn {
+    0%{
+        background: rgb(217,50,50);
+        background: linear-gradient(279deg, rgba(217,50,50,0.742734593837535) 0%, rgba(13,13,13,0.14889705882352944) 80%);
+    }
+    25%{
+        background: rgb(217,50,50);
+        background: linear-gradient(279deg, rgba(217,50,50,0.742734593837535) 0%, rgba(13,13,13,0.14889705882352944) 60%);
+    }
+    50%{
+        background: rgb(217,50,50);
+    background: linear-gradient(279deg, rgba(217,50,50,0.742734593837535) 0%, rgba(13,13,13,0.14889705882352944) 40%);
+    }
+    75%{
+        background: rgb(217,50,50);
+    background: linear-gradient(279deg, rgba(217,50,50,0.742734593837535) 0%, rgba(13,13,13,0.14889705882352944) 20%);
+    }
+    100%{
+        background: rgb(217,50,50);
+        background: linear-gradient(279deg, rgba(217,50,50,0.742734593837535) 0%, rgba(13,13,13,0.14889705882352944) 0%);
+    }
+}
+
+.combo h2 {
+    padding-left: 1rem;
+    font-size: 2.4rem;
+    color: var(--complement2);
+}
+.text-combo{
+    margin-top: 4rem;
+    color: var(--complement4);
+    font-size: 1rem;
+}
+
+
 
 /* SECTION MENU */
 .box-menu{
@@ -820,9 +936,131 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
         color: var(--complement2);
     }
 }
+/*SECTION CONTACT */
+.section-aboutme{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--complement2);
+    margin: 6rem 0;
+}
+@media (min-width:800px) {
+    .section-aboutme{
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--complement2);
+        margin: 6rem 0;
+    }
+    
+}
+.contact-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 4rem 0;
+    box-shadow: 7px 0px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 7px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.contact-box h2 {
+    color: var(--bgcolor);
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+.contact-data{
+    display: flex;
+    justify-content: space-around;
+}
+.contact-data input{
+    margin-bottom: 1rem;
+    padding: .5rem 4rem;
 
-
-
+}
+.contact-comment{
+    display: flex;
+    align-items: center;
+}
+.contact-comment textarea{
+    background-color: var(--complement4);
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    width: 15rem;
+    height: 5rem;
+}
+.btn-contact{
+    margin-top: 2rem;
+    width: 100%;
+    padding: .5rem 0;
+    border: none;
+    border-radius: .5rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--primary);
+    background: var(--complement4);
+}
+.contact-banner{
+    background-image: url(../assets/img/bg-cow1.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    box-shadow: none;
+}
+@media (min-width:800px) {
+    .contact-banner{
+        box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.75);
+    }
+}
+.contact-banner::after{
+    position: absolute;
+    content: '';
+    background-color: #0d0d0d79;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+}
+.banner-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 4rem 0;
+    text-align: center;
+}
+.banner-text h2 {
+    color: var(--complement2);
+    font-size: 2.4rem;
+}
+.banner-p{
+    color: var(--complement4);
+    margin-top: 4rem;
+    padding: 0 2rem;
+}
+.btn-aboutme{
+    color: var(--bgcolor);
+    padding: .5rem 6rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: .2rem;
+    background-color: var(--complement2); 
+    margin-top: 2rem;
+}
+@media (min-width:800px) {
+    .btn-aboutme{
+        margin-top: 0;
+    }
+    
+}
 /* FOOTER */ 
 .footer {
     display: flex;
