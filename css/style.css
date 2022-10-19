@@ -93,7 +93,7 @@ a{
 /* HEADER */
 .header-banner{
     /* background-image: url("https://gallery.yopriceville.com/var/albums/Backgrounds/Vegetable_Background.jpg?m=1478277468");  */
-    background-color: #d93232d3;
+    /* background-color: #d93232d3; */
     width: 100%;
     position: relative;
 }
@@ -392,10 +392,10 @@ input[id="5"]:checked ~ .burger-nav{
 
 .nav-bar a:hover {
     background-color: #d93232a8;
-    box-shadow: 2px 3px 5px var(--bgcolor) inset;
-    border-radius: 4rem;
+    box-shadow: 1px 0px 5px var(--bgcolor) inset;
+    border-radius: .5rem;
     transition: .5s;
-    padding: .8rem 1.4rem;
+    padding: .5rem 2rem;
 }
 
 @media (min-width: 700px) {
@@ -1068,7 +1068,7 @@ background: linear-gradient(90deg, rgba(13,13,13,0.5550595238095238) 0%, rgba(21
     align-items: center;
     background-color: var(--primary);
     margin-top: 4rem;
-    padding: 3rem 0;
+    padding: 2rem 0;
     max-width: 100%;
 
 }
@@ -1389,7 +1389,7 @@ label{
 .btn-submit{
     padding: .5rem 4rem;
     font-weight: 700;
-    border-radius: 1rem;
+    border-radius: .5rem;
     border: none;
 background-color: #fce15bb4;
     color: #d93232c5;
@@ -1607,3 +1607,170 @@ position: relative;
 .card-p p {
     font-size: 1rem;
 }
+
+/* GALLERY */
+
+.wrapper{
+    margin: 100px auto;
+    max-width: 1100px;
+  }
+  .wrapper nav{
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper .items{
+    display: flex;
+    max-width: 720px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .items span{
+    padding: 7px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--primary);
+    border-radius: 50px;
+    border: 2px solid var(--complement2);
+    transition: all 0.3s ease;
+  }
+  .items span.active,
+  .items span:hover{
+    color: #fff;
+    background: var(--complement4);
+  }
+  
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .gallery .image-gallery{
+    width: calc(100% / 4);
+    padding: 7px;
+  }
+  .gallery .image-gallery span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  .gallery .image-gallery img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+  }
+  .gallery .image-gallery:hover img{
+    transform: scale(1.1);
+  }
+  .gallery .image-gallery.hide{
+    display: none;
+  }
+  .gallery .image-gallery.show{
+    animation: animate 0.4s ease;
+  }
+  @keyframes animate {
+    0%{
+      transform: scale(0.5);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  
+  .preview-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #fff;
+    max-width: 700px;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  }
+  .preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+  }
+  .preview-box .details{
+    padding: 13px 15px 13px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .details .title p{
+    font-weight: 500;
+    margin-left: 5px;
+  }
+  .details .icon{
+    color: #007bff;
+    font-style: 22px;
+    cursor: pointer;
+  }
+  .preview-box .image-box{
+    width: 100%;
+    display: flex;
+  }
+  .image-box img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+  }
+  .shadow{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0,0,0,0.4);
+  }
+  .shadow.show{
+    display: block;
+  }
+  
+  @media (max-width: 1000px) {
+    .gallery .image-gallery{
+      width: calc(100% / 3);
+    }
+  }
+  @media (max-width: 800px) {
+    .gallery .image-gallery{
+      width: calc(100% / 2);
+    }
+  }
+  @media (max-width: 700px) {
+    .wrapper nav .items{
+      max-width: 600px;
+    }
+    nav .items span{
+      padding: 7px 15px;
+    }
+  }
+  @media (max-width: 600px) {
+    .wrapper{
+      margin: 30px auto;
+    }
+    .wrapper nav .items{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav .items span{
+      margin: 5px;
+    }
+    .gallery .image-gallery{
+      width: 100%;
+    }
+  }
+  
