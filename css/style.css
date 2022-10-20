@@ -1656,7 +1656,7 @@ position: relative;
   }
   .gallery .image-gallery img{
     width: 100%;
-    vertical-align: middle;
+    vertical-align:bottom;
     transition: all 0.3s ease;
   }
   .gallery .image-gallery:hover img{
@@ -1678,20 +1678,23 @@ position: relative;
   }
   
   .preview-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
-    background: #fff;
-    max-width: 700px;
+    background-color: var(--complement2);
+    max-width: 600px;
     width: 100%;
-    z-index: 5;
+    z-index: 3;
     opacity: 0;
     pointer-events: none;
     border-radius: 3px;
-    padding: 0 5px 5px 5px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 0px 15px rgba(0,0,0,0.2); */
   }
+
   .preview-box.show{
     opacity: 1;
     pointer-events: auto;
@@ -1699,32 +1702,42 @@ position: relative;
     transition: all 0.3s ease;
   }
   .preview-box .details{
-    padding: 13px 15px 13px 10px;
+    /* padding: 13px 15px 13px 10px; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
-  .details .title{
-    display: flex;
-    font-size: 18px;
+  .details .title-gallery{
+    font-size: 1.4rem;
     font-weight: 400;
   }
-  .details .title p{
+  .details .title-gallery p{
     font-weight: 500;
     margin-left: 5px;
   }
-  .details .icon{
-    color: #007bff;
-    font-style: 22px;
-    cursor: pointer;
+  .title-gallery{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
   }
+  .ingredients{
+    margin-top: 2rem;
+  }
+.details{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+
+}
   .preview-box .image-box{
     width: 100%;
     display: flex;
   }
   .image-box img{
     width: 100%;
-    border-radius: 0 0 3px 3px;
+    height: auto;
   }
   .shadow{
     position: fixed;
@@ -1732,14 +1745,18 @@ position: relative;
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
     display: none;
     background: rgba(0,0,0,0.4);
   }
   .shadow.show{
     display: block;
   }
-  
+  @media (min-width:700px) {
+    .details{
+        flex-direction: row;
+    }
+  }
   @media (max-width: 1000px) {
     .gallery .image-gallery{
       width: calc(100% / 3);
@@ -1754,6 +1771,7 @@ position: relative;
     .wrapper nav .items{
       max-width: 600px;
     }
+    
     nav .items span{
       padding: 7px 15px;
     }

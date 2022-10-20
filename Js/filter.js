@@ -29,7 +29,7 @@ window.onload = ()=>{ //after window loaded
 //fullscreen image preview function
 //selecting all required elements
 const previewBox = document.querySelector(".preview-box"),
-categoryName = previewBox.querySelector(".title p"),
+categoryName = previewBox.querySelector(".title-gallery p"),
 previewImg = previewBox.querySelector("img"),
 closeIcon = previewBox.querySelector(".icon"),
 shadow = document.querySelector(".shadow");
