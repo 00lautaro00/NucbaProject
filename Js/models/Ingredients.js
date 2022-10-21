@@ -2,15 +2,15 @@
 
 export const Ingredients = [
     {
-    name:'burger',
+    name:'burgerHappy',
     description: 'tomato, potato,'
     },
     {
-    name:'burger',
+    name:'smootieDark',
     description: 'tomato, potato,'
     },
     {
-    name:'burger',
+    name:'pizzaRainbow',
     description: 'tomato, potato,'
     },
 
