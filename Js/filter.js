@@ -34,19 +34,18 @@ window.onload = ()=>{ //after window loaded
 const previewBox = document.querySelector(".preview-box"),
 categoryName = previewBox.querySelector(".title-gallery p"),
 previewImg = previewBox.querySelector("img"),
-closeIcon = previewBox.querySelector(".icon"),
+closeIcon = previewBox.querySelector(".icon-ingredients"),
 shadow = document.querySelector(".shadow");
 
 function preview (element) {
     //once user click on any image then remove the scroll bar of the body, so user cant scroll up or down
     document.querySelector("body").style.overflow = "hidden";
     let selectedPrevImg = element.src; //getting user clicked image source link and stored in a variable
-    console.log(element)
-    const ingredientList = Ingredients.map((ingr) => element.getAttribute("id") === ingr.name ? ingr.description : console.log('nothing') );
-    // console.log(ingredientList)
+    const setIngredientList = Ingredients.map((ingr) => element.alt === ingr.name ? ingr.description : console.log('nothing') );
+    const ingredientList = setIngredientList.filter(ingr => ingr !== undefined);
     let selectedImgCategory = ingredientList //getting user clicked image data-name value
     previewImg.src = selectedPrevImg; //passing the user clicked image source in preview image source
-    categoryName.textContent = selectedImgCategory; //passing user clicked data-name value in category name
+    categoryName.innerHTML = selectedImgCategory; //passing user clicked data-name value in category name
     previewBox.classList.add("show"); //show the preview image box
     shadow.classList.add("show"); //show the light grey background
     closeIcon.addEventListener("click", ()=>{ //if user click on close icon of preview box

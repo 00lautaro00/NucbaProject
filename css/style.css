@@ -1720,7 +1720,9 @@ position: relative;
     height: 100%;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    text-align: center;
+    line-height: 2.5rem ;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   }
   .ingredients{
     margin-top: 2rem;
@@ -1729,7 +1731,7 @@ position: relative;
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
-
+    position: relative;
 }
   .preview-box .image-box{
     width: 100%;
@@ -1738,6 +1740,11 @@ position: relative;
   .image-box img{
     width: 100%;
     height: auto;
+  }
+  .icon-ingredients{
+    position: absolute;
+    top: 5%;
+    right: 5%;
   }
   .shadow{
     position: fixed;
@@ -1756,6 +1763,7 @@ position: relative;
     .details{
         flex-direction: row;
     }
+    
   }
   @media (max-width: 1000px) {
     .gallery .image-gallery{
